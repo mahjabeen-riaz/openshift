@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       https://camel.apache.org/schema/spring/camel-spring.xsd">
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+        <route id="_route1">
+            <from id="_from1" uri="restlet:http://localhost:8081/helloworld"/>
+            <log id="_log1" message="Request received, Header Value is: ${header.name}"/>
+            <setProperty id="_setHeaderProperty1" propertyName="response">
+                <simple>Hello ${header.name} </simple>
+            </setProperty>
+            <setBody id="_setBody1">
+                <simple>Hello ${property.response}</simple>
+            </setBody>
+        </route>
+    </camelContext>
+</beans>
