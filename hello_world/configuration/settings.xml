@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-
-     Copyright 2005-2018 Red Hat, Inc.
-
+     Copyright 2005-2016 Red Hat, Inc.
      Red Hat licenses this file to you under the Apache License, version
      2.0 (the "License"); you may not use this file except in compliance
      with the License.  You may obtain a copy of the License at
-
-        https://www.apache.org/licenses/LICENSE-2.0
-
+        http://www.apache.org/licenses/LICENSE-2.0
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
      implied.  See the License for the specific language governing
      permissions and limitations under the License.
-
 -->
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -22,10 +17,8 @@
 
   <profiles>
     <profile>
-      <id>fuse.repos</id>
-
+      <id>fusesource.repo</id>
       <repositories>
-        
         <repository>
           <id>maven.central</id>
           <name>Maven Central</name>
@@ -38,8 +31,6 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </repository>
- 
-        
         <repository>
           <id>redhat.ga</id>
           <name>Red Hat General Availability Repository</name>
@@ -52,12 +43,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </repository>
- 
-        
         <repository>
-          <id>redhat.ea</id>
-          <name>Red Hat Early Access Repository</name>
-          <url>https://maven.repository.redhat.com/earlyaccess/all</url>
+          <id>redhat.earlyaccess</id>
+          <name>Red Hat General Early Access Repository</name>
+          <url>https://maven.repository.redhat.com/earlyaccess</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -66,12 +55,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </repository>
- 
-        
         <repository>
-          <id>jboss.ea</id>
-          <name>JBoss Early Access Repository</name>
-          <url>http://repository.jboss.org/nexus/content/groups/ea</url>
+          <id>fusesource.m2</id>
+          <name>FuseSource Community Release Repository</name>
+          <url>https://repo.fusesource.com/nexus/content/groups/public</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -80,12 +67,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </repository>
- 
-        
         <repository>
-          <id>jboss.brew</id>
-          <name>JBoss Brew Repository</name>
-          <url>http://download-node-02.eng.bos.redhat.com/brewroot/repos/jb-common-build/latest/maven/</url>
+          <id>fusesource.ea</id>
+          <name>FuseSource Community Early Access Release Repository</name>
+          <url>https://repo.fusesource.com/nexus/content/groups/ea</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -94,39 +79,8 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </repository>
- 
-        
-        <repository>
-          <id>fis.brew</id>
-          <name>FIS Brew Repository</name>
-          <url>http://download-node-02.eng.bos.redhat.com/brewroot/repos/jb-fis-2.0-maven-build/latest/maven/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-        </repository>
- 
-        
-        <repository>
-          <id>eap.brew</id>
-          <name>EAP Brew Repository</name>
-          <url>http://download.eng.bos.redhat.com/brewroot/repos/jb-eap-7.1-rhel-7-maven-build/latest/maven/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-        </repository>
- 
       </repositories>
-
       <pluginRepositories>
-        
         <pluginRepository>
           <id>maven.central</id>
           <name>Maven Central</name>
@@ -139,8 +93,6 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </pluginRepository>
- 
-        
         <pluginRepository>
           <id>redhat.ga</id>
           <name>Red Hat General Availability Repository</name>
@@ -153,12 +105,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </pluginRepository>
- 
-        
         <pluginRepository>
-          <id>redhat.ea</id>
-          <name>Red Hat Early Access Repository</name>
-          <url>https://maven.repository.redhat.com/earlyaccess/all</url>
+          <id>redhat.earlyaccess</id>
+          <name>Red Hat General Early Access Repository</name>
+          <url>https://maven.repository.redhat.com/earlyaccess</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -167,12 +117,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </pluginRepository>
- 
-        
         <pluginRepository>
-          <id>jboss.ea</id>
-          <name>JBoss Early Access Repository</name>
-          <url>http://repository.jboss.org/nexus/content/groups/ea</url>
+          <id>fusesource.m2</id>
+          <name>FuseSource Community Release Repository</name>
+          <url>https://repo.fusesource.com/nexus/content/groups/public</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -181,12 +129,10 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </pluginRepository>
- 
-        
         <pluginRepository>
-          <id>jboss.brew</id>
-          <name>JBoss Brew Repository</name>
-          <url>http://download-node-02.eng.bos.redhat.com/brewroot/repos/jb-common-build/latest/maven/</url>
+          <id>fusesource.ea</id>
+          <name>FuseSource Community Early Access Release Repository</name>
+          <url>https://repo.fusesource.com/nexus/content/groups/ea</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -195,41 +141,12 @@
             <updatePolicy>never</updatePolicy>
           </releases>
         </pluginRepository>
- 
-        
-        <pluginRepository>
-          <id>fis.brew</id>
-          <name>FIS Brew Repository</name>
-          <url>http://download-node-02.eng.bos.redhat.com/brewroot/repos/jb-fis-2.0-maven-build/latest/maven/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-        </pluginRepository>
- 
-        
-        <pluginRepository>
-          <id>eap.brew</id>
-          <name>EAP Brew Repository</name>
-          <url>http://download.eng.bos.redhat.com/brewroot/repos/jb-eap-7.1-rhel-7-maven-build/latest/maven/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-          </releases>
-        </pluginRepository>
- 
       </pluginRepositories>
     </profile>
   </profiles>
 
   <activeProfiles>
-    <activeProfile>fuse.repos</activeProfile>
+    <activeProfile>fusesource.repo</activeProfile>
   </activeProfiles>
 
 </settings>
